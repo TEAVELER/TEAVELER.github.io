@@ -1,4 +1,3 @@
-# TEAVELER.github.io
 <!DOCTYPE html>
 <html>
   <head>
@@ -26,70 +25,3 @@
     <p>为了达成我们共同的理想，我们遵循一系列的价值观和理念，请参阅 <a href="https://www.mozilla.org/zh-CN/about/manifesto/">Mozilla 宣言</a>。</p>
   </body>
 </html>
-let myImage = document.querySelector('img');
-
-myImage.onclick = function() {
-    let mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/firefox-icon.png') {
-      myImage.setAttribute('src', 'images/firefox2.png');
-    } else {
-      myImage.setAttribute('src', 'images/firefox-icon.png');
-    }
-}
-let myButton = document.querySelector('button');
-let myHeading = document.querySelector('h1');
-function setUserName() {
-    let myName = prompt('请输入你的名字。');
-    if(!myName) {
-      setUserName();
-    } else {
-      localStorage.setItem('name', myName);
-      myHeading.textContent = 'Mozilla 酷毙了，' + myName;
-    }
-  }
-  
-  if(!localStorage.getItem('name')) {
-    setUserName();
-  } else {
-    let storedName = localStorage.getItem('name');
-    myHeading.textContent = 'Mozilla 酷毙了，' + storedName;
-  }
-  myButton.onclick = function() {
-    setUserName();
- }
- html {
-  font-size: 10px;
-  font-family: 'Noto Sans SC', sans-serif;
-  background-color: #00879f8e;
-}
-
-body {
-  width: 600px;
-  margin: 0 auto;
-  background-color: #d8bc1e86;
-  padding: 0 40px 20px 40px;
-  border: 5px solid black;
-}
-
-h1 {
-  font-size: 60px;
-  text-align: center;
-  margin: 0;
-  padding: 20px 0;
-  color: #00539F;
-  text-shadow: 3px 3px 1px black;
-}
-
-p, li {
-  font-size: 16px;
-  line-height: 2;
-  letter-spacing: 1px;
-}
-
-img {
-  display: block;
-  margin: 0 auto;
-}
-
-
-   
